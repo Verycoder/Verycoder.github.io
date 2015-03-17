@@ -14,6 +14,12 @@
 <script type="text/javascript" src="scripts/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/common.js"></script>
+<script type="text/javascript" >
+	function go(){
+		var content = $.ajax({url:"music/Hello World.txt", async:false});
+		alert(content.responseText);
+	}
+</script>
 </head>
 <EMBED src="music/1.mp3" width=0 height=0 volume=70 autostart=true loop=5 style="background:white"></EMBED> 
 <body>
@@ -59,6 +65,8 @@
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;2015.3.15 4.09</p>
 		</div>
 	</fieldset>
+
+	<input type="button" value="TEST" onclick="go()">
 	
 </div>
 
