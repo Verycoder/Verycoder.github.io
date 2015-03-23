@@ -133,7 +133,7 @@ function move(){
 }
 
 function draw(){
-	msg.innerHTML = "分数： "+ score;
+	msg.innerHTML = "SCORE  "+ score;
 	//清除屏幕
 	ctx.clearRect(0,0,sidewidth,sideheight);
 	//绘制游戏边框
@@ -201,7 +201,7 @@ function thread(){
 	threadNum++;
 	if(check()){
 		window.clearInterval(interval);
-		alert("好遗憾啊，再来一次吧！");
+		alert("Try Again!");
 		init();
 	}
 	
