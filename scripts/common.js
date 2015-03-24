@@ -1,4 +1,28 @@
-
+var Week = ["日","一","二","三","四","五","六"];
+function showTime(){
+	window.setInterval(function(){
+		var time = new Date();
+		var year = time.getFullYear().toString();
+		var month = (time.getMonth() + 1).toString();
+		var date = time.getDate().toString();
+		var hour = (time.getHours() + 1).toString();
+		var min = time.getMinutes().toString();
+		var sec = time.getSeconds().toString();
+		var day = time.getDay().toString();
+		if(month.length == 1)
+			month = "0"+month;
+		if(date.length == 1)
+			date = "0"+date;
+		if(hour.length == 1)
+			hour = "0"+hour;
+		if(min.length == 1)
+			min = "0"+min;
+		if(sec.length == 1)
+			sec = "0"+sec;
+		var mytime = year + "年" + month + "月" + date + "日  星期" +  Week[day] + "  " + hour + ":" + min + ":" + sec;
+		$("#time").html(mytime);
+	}, 1000);
+}
 function showChile(input){
 	var ddElement = $("#"+input);
 	var showStatus = ddElement.attr("hidden");
