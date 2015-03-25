@@ -1,0 +1,57 @@
+<h4>Github搭建和应用</h4>
+<a href="www.linuxeden.com/html/develop/20131219/146589.html
+">参考地址</a> 
+<pre>
+1. 安装Git客户端
+	#yum install git
+2. 配置Git
+	2.1 创建本地ssh key
+		#ssh-keygen -t rsa -C "注册邮箱"
+	2.2 检测配置是否成功
+		#ssh -T git@github.com
+	2.3 添加远程地址
+		#git init
+		#git remote add origin git@github.com:yourName/yourRepo.git
+3. 提交、上传代码
+	#git add yourfile
+	#git commit -m "this is comments"
+	#git push origin master / git pull => git push --force origin master
+4. 下载代码
+	#git clone http://github.com/....
+	4.1 更新代码
+		#git pull origin master
+</pre>
+
+<h4>压缩与解压缩</h4>	
+<pre>
+例子：	zip -r myfile.zip ./*
+说明： 将当前目录下的所有文件和文件夹全部压缩成myfile.zip, -r 表示递归压缩子目录下的文件。	
+
+例子： unzip -o -d /home/sunny myfile.zip
+说明： 把myfile.zip 文件解压到/home/sunny/
+		-o: 不提示的情况下覆盖文件；
+		-d: -d /home/sunny 指明将文件解压缩到/home/sunny目录
+</pre>
+
+<h4>Vim</h4>
+<pre>
+1. 窗口切换
+	:tabnew 新tab
+	:tabc 关闭当前tab
+	:tabo 关闭其他所有tab
+	:tabs 查看所有打开的tab
+	:tabp / gt 前一个
+	:tabn / gT 后一个
+	
+2. 窗口调整
+	纵向
+	：res num 显示行数为num
+	 :res+num 显示行数+num
+	 :res-num 显示行数-num
+
+	 横向
+	 :vertical res num 指定num列
+	 :vertical res+num 增加num列
+	 :vertical res-num 减少num列
+</pre>
+
