@@ -5,7 +5,7 @@ function showTime(){
 		var year = time.getFullYear().toString();
 		var month = (time.getMonth() + 1).toString();
 		var date = time.getDate().toString();
-		var hour = (time.getHours() + 1).toString();
+		var hour = time.getHours().toString();
 		var min = time.getMinutes().toString();
 		var sec = time.getSeconds().toString();
 		var day = time.getDay().toString();
