@@ -1,5 +1,5 @@
 <h4>Github搭建和应用</h4>
-<a href="www.linuxeden.com/html/develop/20131219/146589.html
+<a href="http://www.linuxeden.com/html/develop/20131219/146589.html
 ">参考地址</a> 
 <pre>
 1. 安装Git客户端
