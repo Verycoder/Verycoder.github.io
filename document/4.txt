@@ -31,6 +31,7 @@
 说明： 把myfile.zip 文件解压到/home/sunny/
 		-o: 不提示的情况下覆盖文件；
 		-d: -d /home/sunny 指明将文件解压缩到/home/sunny目录
+tar: 解压缩 [verycoder@localhost ~]$ tar -xf filename 
 </pre>
 
 <h4>Vim</h4>
@@ -55,3 +56,19 @@
 	 :vertical res-num 减少num列
 </pre>
 
+<h4>2015.3.31</h4>
+<pre>
+1. 显示语言
+[verycoder@localhost ~]$ echo $LANG
+2. 显示时间
+[verycoder@localhost ~]$ date
+[verycoder@localhost ~]$ date +%Y/%m/%d
+3. 日历
+cal 语法: cal [[month] year]
+[verycoder@localhost ~]$ cal
+[verycoder@localhost ~]$ cal 2009
+[verycoder@localhost ~]$ cal 10 2009
+4. 计算器
+[verycoder@localhost ~]$ bc
+	设置小数点后3位: scale=3
+</pre>
