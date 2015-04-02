@@ -72,3 +72,19 @@ cal 语法: cal [[month] year]
 [verycoder@localhost ~]$ bc
 	设置小数点后3位: scale=3
 </pre>
+
+<h4>2015.4.2</h4>
+<pre>
+1. 文件属性
+drwxr-xr-x. 3 verycoder verycoder 4096 Mar 31 23:51 Downloads
+[权限][连接][所有者][用户组][文件容量][修改日期][文件名]
+[d] 目录
+[-] 文件
+[l] 连接文件
+[b] 设备文件里面的可供存储的接口设备
+[c] 设备文件里面的串行端口设备，例如键盘，鼠标
+2. 改变文件属性和权限
+	chgrp: 改变文件所属用户组
+	chown: 改变文件所有者
+	chmod: 改变文件的权限
+</pre>
