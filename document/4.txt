@@ -56,6 +56,8 @@ tar: 解压缩 [verycoder@localhost ~]$ tar -xf filename
 	 :vertical res-num 减少num列
 </pre>
 
+<h4>中文man</h4>
+<a href="http://www.cnblogs.com/chengmo/archive/2010/10/27/1862553.html">教程1</a>
 <h4>2015.3.31</h4>
 <pre>
 1. 显示语言
@@ -87,4 +89,38 @@ drwxr-xr-x. 3 verycoder verycoder 4096 Mar 31 23:51 Downloads
 	chgrp: 改变文件所属用户组
 	chown: 改变文件所有者
 	chmod: 改变文件的权限
+</pre>
+
+<h4>2015.4.7</h4>
+<pre>
+1. 目录显示
+	pwd
+	显示真实地址 pwd -P
+2. 建立目录
+	递归建立: mkdir -p test/test1/test2
+	设置权限: mkdir -m 711 test
+3. 环境变量
+	echo $PATH
+3. cp命令
+	语法: cp [-adfilprsu] 源文件 目标文件
+	-a: 相当于-pdr
+	-p: 连同文件的属性一起复制，而非默认属性
+	-d: 若源文件为link file, 复制连接文件而非文件本身
+	-r: 递归复制， 用于目录文件复制
+	-f: 强制， 若目标文件已经存在， 删除后重试
+	-i: 若目标文件已经存在， 给与提示
+	-l: 进行硬连接的连接文件
+	-s: 进行符号连接的链接文件(快捷方式)
+	-u: 当目标文件比源文件旧才更新
+	ps: 如果源文件有2个以上， 则目标文件需要是目录
+4. touch 命令(修改文件时间或者创建新文件)	
+	mtime: 当文件内容被修改时
+	ctime: 当文件状态被修改时
+	atime: 当文件被使用时
+	语法: touch [-acdmt] 文件
+	-a: 仅修改访问时间
+	-c: 仅修改时间，若文件不存在不会创建新文件 
+	-d: 后面可以跟日期，而不是当前日期， 也可以使用 --date="日期或时间"
+	-m: 仅修改mtime
+	-t: 后面可以跟日期，而不是当前日期
 </pre>
