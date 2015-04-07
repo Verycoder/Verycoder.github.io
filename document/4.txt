@@ -124,3 +124,24 @@ drwxr-xr-x. 3 verycoder verycoder 4096 Mar 31 23:51 Downloads
 	-m: 仅修改mtime
 	-t: 后面可以跟日期，而不是当前日期
 </pre>
+<h4>2015.4.8</h4>
+<pre>
+1. 文件默认权限: umask
+	[yifei@localhost ~]$ umask
+	0002
+	ps: 数字说明被减掉的权限
+	修改默认权限: 
+	[yifei@localhost ~]$ umask 002
+2. 文件隐藏属性: chattr
+	语法: chattr [+-=] [ASacdistu] 文件或目录
+	A: 当有访问此文件时， 不会修改atime(对于I/O较慢的机器有帮助)
+	S: 由异步写如磁盘变为同步
+	a: 只能增加数据，而不能删除也不能修改数据
+	c: 自动压缩文件，读取时解压缩，存时先保存再压缩
+	d: 当dump程序被执行时，使文件(目录)不会被dump备份
+	i: 无法删除，改名，设置连接，写入和添加数据
+	s: 当删除时，完全从硬盘删除
+	u: 与s相反，删除后数据仍存在于硬盘
+3. 查看隐藏属性: lsattr
+</pre>
+	
