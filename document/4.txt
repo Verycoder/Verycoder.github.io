@@ -1,3 +1,12 @@
+<h4>Linux 装机预备</h4>
+<pre>
+1. 安装Flash插件
+	32位
+	rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm;rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux;yum update;yum install flash-plugin
+	64位
+	cd /tmpwget;yum install wget http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_2_p3_64bit_linux_111710.tar.gz;tar -xzvf flashplayer10_2_p3_64bit_linux_111710.tar.gz;
+
+</pre>
 <h4>Github搭建和应用</h4>
 <a href="http://www.linuxeden.com/html/develop/20131219/146589.html
 ">参考地址</a> 
