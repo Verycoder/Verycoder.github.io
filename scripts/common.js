@@ -33,13 +33,13 @@ function showChile(input){
 	}
 }
 
-function openDetail(input, contentUrl, musicUrl){
+function openDetail(input, contentUrl, musicUrl, showMusic){
 	var detail = $(input).parent().parent().parent().find("div");
 	if(contentUrl != null){
 		var content = $.ajax({url:contentUrl, async:false});
 		detail.html(content.responseText);
 	}
-	if(musicUrl != null){
+	if(musicUrl != null && showMusic == "true"){
 		$("EMBED").attr("hidden","hidden");
 		var newEmbed = '<EMBED src="'+ musicUrl +'" width=0 height=0 volume=70 autostart=true loop=5 style="background:white"></EMBED>';
 		$("#music").html(newEmbed);
