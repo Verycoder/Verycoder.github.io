@@ -199,5 +199,28 @@ drwxr-xr-x. 3 verycoder verycoder 4096 Mar 31 23:51 Downloads
 			其他操作
 			-exec command: command为其他命令, 用来处理查找到的结果, 例子: find / -perm +7000 -exec ls -l {}\;
 
-
+</pre>
+<h4>2015.4.13</h4>
+<pre>
+1. 磁盘与目录的容量: df, du
+	语法: df [-ahikHTm] [目录或文件名]
+	-a: 列出所有的文件系统
+	-h: 以较易读懂的大小格式显示
+	-i: 不用硬盘容量，而以inode的数量来显示
+	-k: 以KB来显示容量
+	-H: 以M=1000k替代M=1024K
+	-T: 连同该分区的文件系统名称(例如ext3) 也列出
+	-m: 以MB来显示容量
+2. 连接命令： ln
+	语法: ln [-sh] 源文件 目标文件
+	-s: 如果不加任何参数进行连接，那就是hard link, s 为 symbolic link
+	-f: 如果目标文件存在时， 则主动将目标文件直接删除后再创建
+3. 磁盘的分区、格式化、检验与挂载
+	见《鸟哥的linux私房菜》P217
+4. 创建大型文件(作为分区使用..)
+	dd if=/dev/zero of=/home/loopdev bs=1M count=512
+	mkfs -t ext3 /home/loopdev
+5. 内存交换空间的构建
+	见《鸟哥的linux私房菜》P238
+	
 </pre>
