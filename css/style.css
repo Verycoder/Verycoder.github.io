@@ -8,6 +8,10 @@ body{
 	padding: 10px 0 0 20px;
 	font-size:20px;
 }
+.title p #status{
+	padding-left: 20px;
+	font-size: 11px;
+}
 .title #time{
 	font-size:15px;	
 }
