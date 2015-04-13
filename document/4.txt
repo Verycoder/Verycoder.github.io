@@ -253,3 +253,7 @@ drwxr-xr-x. 3 verycoder verycoder 4096 Mar 31 23:51 Downloads
 	
 </pre>
 <h4>2015.4.14</h4>
+<pre>
+1. 完整备份工具: dump
+	见《鸟哥的linux私房菜》P238
+</pre>
