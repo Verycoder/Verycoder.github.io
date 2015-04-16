@@ -1,0 +1,58 @@
+参考资料: 《鸟哥的Linux私房菜》P294
+<h4>变量的设置规则</h4>
+<pre>
+1. 变量与变量内容以一个等号"="来连接
+	[yifei@localhost]#myname=yifei
+	
+2. 等号两边不能直接接空格，如下错误:
+	[yifei@localhost]#maname = yifei
+	
+3. 变量名只能是英文字母与数字，且数字不能作为开头，如下错误:
+	[yifei@localhost]#2myname=yifei
+	
+4. 双引号内的特殊字符可以保留原有的特性
+	[yifei@localhost]#var="lang is $LANG"
+	[yifei@localhost]#echo $var
+	[yifei@localhost]#lang is en_US
+	
+5. 单引号内的特殊字符仅为一般字符(纯文本)
+	[yifei@localhost]#var='lang is $LANG'
+	[yifei@localhost]#echo $var
+	[yifei@localhost]#lang is $LANG
+	
+6. 可用转义字符"\"将特殊符号变为一般字符
+	
+7. 可使用反单引号(键盘1左边的按键)或者$(命令)来通过其他的命令提供信息
+	[yifei@localhost]#version=$(uname -r)
+	[yifei@localhost]#version=`uname -r`
+	
+8. 增加变量内容
+	[yifei@localhost]#PATH="$PATH":/home/bin
+	[yifei@localhost]#PATH=${PATH}:/home/bin
+	
+9. 使变量变成环境变量
+	[yifei@localhost]#export PATH
+</pre>
+<h4>变量键盘读取、数组与声明</h4>
+<pre>
+1. read [-pt] variable
+	-p: 后面接提示符
+	-t: 后面接收超时时间，秒
+	[yifei@localhost]# read -p "Please enter a number" -t 10 num
+
+2. declare [-aixr] variable
+	-a: 声明一个数组
+	-i: 声明一个int类型
+	-x: 声明一个环境变量
+	-r: 声明一个只读变量
+
+3. 数组的使用
+	[yifei@localhost]#declare -a array
+	[yifei@localhost]#array[1]="hello"
+	[yifei@localhost]#array[2]="world"
+	[yifei@localhost]#array[3]="I\'m yifei"
+	[yifei@localhost]#echo "${array[1]} ${array[2]}, ${array[3]}"
+	
+</pre>
+
+	[yifei@localhost]#
