@@ -61,7 +61,7 @@ body{
 	padding:10px;
 }
 .fooder{
-	position: absolute;
+	position: relative;
 	left: 20px;
 	bottom: 20px;	
 }
