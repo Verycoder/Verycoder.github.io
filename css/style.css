@@ -60,4 +60,8 @@ body{
 .note-place{
 	padding:10px;
 }
-
+.fooder{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;	
+}

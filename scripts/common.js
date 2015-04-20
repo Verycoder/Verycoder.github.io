@@ -39,7 +39,7 @@ function openDetail(input, contentUrl, musicUrl, showMusic){
 		var content = $.ajax({url:contentUrl, async:false});
 		detail.html(content.responseText);
 	}
-	if(musicUrl != null && showMusic == "true"){
+	if(musicUrl != null && showMusic == true){
 		$("EMBED").attr("hidden","hidden");
 		var newEmbed = '<EMBED src="'+ musicUrl +'" width=0 height=0 volume=70 autostart=true loop=5 style="background:white"></EMBED>';
 		$("#music").html(newEmbed);
@@ -48,15 +48,32 @@ function openDetail(input, contentUrl, musicUrl, showMusic){
 	musicUrl = "'"+ musicUrl +"'";
 	detail.removeAttr("hidden");
 	$(input).html("收起");
-	$(input).attr("onclick","closeDetail(this, "+ contentUrl +", " + musicUrl + ")");
+	$(input).attr("onclick","closeDetail(this, "+ contentUrl +", " + musicUrl + ", " + showMusic + ")");
 	
 }
 
-function closeDetail(input, contentUrl, musicUrl){
+function closeDetail(input, contentUrl, musicUrl, showMusic){
 	contentUrl = "'"+ contentUrl +"'";
 	musicUrl = "'"+ musicUrl +"'";
 	var detail = $(input).parent().parent().parent().find("div");
 	detail.prop("hidden","hidden");
 	$(input).html("展开");
-	$(input).attr("onclick","openDetail(this, "+ contentUrl +", " + musicUrl + ")");
+	$(input).attr("onclick","openDetail(this, "+ contentUrl +", " + musicUrl + ", " + showMusic +")");
+}
+
+function closeAll(){
+	// debugger;
+	// var fieldsets = $("#content fieldset");
+	// for(var i=0; i < fieldsets.length; i++){
+	// 	var localField = $(fieldsets[i]);
+	// 	var localDiv = localField.find("div");
+	// 	if(localDiv.attr("hidden") != "hidden"){
+	// 		localField.find("a").click();
+	// 	}
+	// }
+	debugger;
+	var openContent = $("#content div[hidden!='hidden']");
+	for(var i=0; i<openContent.length; i++){
+		$(openContent[i]).parent().find("a").click();
+	}
 }
