@@ -64,4 +64,22 @@
 	${var/oldstr/newstr}: 若变量内容符合"旧字符串", 则第一个旧字符串会被新字符串替换
 	${var//oldstr/newstr}: 若变量内容符合"旧字符串", 则所有旧字符串会被新字符串替换
 </pre>
+
+<h4>系统环境配置文件读取(鸟哥的Linux私房菜P320)</h4>
+
+<h4>数据流重定向</h4>
+<pre>
+	覆盖内容(正确信息)
+	[yifei@localhost]#ll -a > Documents/log
+	追加内容(正确信息)
+	[yifei@localhost]#ll -a >> Documents/log
+	覆盖内容(错误信息)
+	[yifei@localhost]#ll -a 2> Documents/log
+	追加内容(错误信息)
+	[yifei@localhost]#ll -a 2>> Documents/log
+	正确错误信息同时写入同一文件
+	[yifei@localhost]#ll -a 2>&1 Documents/log
+	[yifei@localhost]#ll -a &> Documents/log
+	
+</pre>
 	[yifei@localhost]#
