@@ -93,9 +93,9 @@ Oh no, I don't like make B!!!
 	[yifei@localhost]#echo $PATH | cut -d ':' -f 3
 	[yifei@localhost]#echo $PATH | cut -c 12-20 (it would show the content between 12th and 20th)
 
-Sorroy for my pool english, I found this is so difficult to describe what i learn by english.
+Sorroy for my pool english, I found this is so difficult to describe what I learn by english.
 So this part is in <Brother Bird's Linux> P334.
-And later I would rewrite this part if has time. ^-^.
+And later I would rewrite this part if have time. ^-^.
 </pre>
 	[yifei@localhost]#
 	
