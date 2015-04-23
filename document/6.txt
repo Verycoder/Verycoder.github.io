@@ -82,4 +82,20 @@
 	[yifei@localhost]#ll -a &> Documents/log
 	
 </pre>
+<h4>pipe</h4>
+<pre>
+Today my X-window is out of work, so i must to work with english.
+Oh no, i don't like make B!!!
+	1. cut
+	-d: followed by splite character, used with -f together.
+	-f: followed by the index of the array get by -d.
+	-c: use the index of characters to splite the line. 
+	[yifei@localhost]#echo $PATH | cut -d ':' -f 3
+	[yifei@localhost]#echo $PATH | cut -c 12-20 (it would show the content between 12th and 20th)
+
+Sorroy for my pool english, I found this is so difficult to describe what i learn by english.
+So this part is in <Brother Bird's Linux> P334.
+And later I would rewrite this part if has time. ^-^.
+</pre>
 	[yifei@localhost]#
+	
