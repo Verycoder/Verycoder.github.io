@@ -84,8 +84,8 @@
 </pre>
 <h4>pipe</h4>
 <pre>
-Today my X-window is out of work, so i must to work with english.
-Oh no, i don't like make B!!!
+Today my X-window is out of work, so I must to work with english.
+Oh no, I don't like make B!!!
 	1. cut
 	-d: followed by splite character, used with -f together.
 	-f: followed by the index of the array get by -d.
