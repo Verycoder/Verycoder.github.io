@@ -98,4 +98,29 @@ So this part is in <Brother Bird's Linux> P334.
 And later I would rewrite this part if have time. ^-^.
 </pre>
 	[yifei@localhost]#
-	
+<h4>字符转换命令tr, col, join, paste, expand</h4>	
+<pre>
+内容太多， 见《鸟哥的Linux私房菜》P338
+</pre>
+
+<h4>正则表达式</h4>	
+<pre>
+1. 解决不同语系导致的编码不同问题，特殊符号
+[:alnum:] 代表英文大小写字符及数字，即0-9,A-Z,a-z
+[:alpha:] 代表英文大小写字符，即a-z,A-Z
+[:blank:] 代表空格符与[Tab]
+[:cntrl:] 代表键盘上的控制按键，例如CR,LF,Tab,Del等
+[:digit:] 代表数字，即0-9
+[:graph:] 除了空格符（空格键与[Tab]）外的其他按键
+[:lower:] 代表小写字符，即a-z
+[:print:] 代表任何可以被打印出来的字符
+[:punct:] 代表标点符号，即"'?!;:#$等
+[:upper:] 代表大写字符，即A-Z
+[:space:] 任何会产生空白的字符，包括空格键[Tab] CR 等
+[:xdigit:] 代表十六进制的数字类型，因此包括0-9，A-F，a-f
+
+2. grep [-A] [-B] [--color=auto] '搜寻字符串' filename
+-A: 后面可加数字，为after的意思，除了列出该行外，后续的n行也列出来
+-B: 后面可加数字，为befer的意思，除了列出该行外，前面的n行也列出来
+
+</pre>
