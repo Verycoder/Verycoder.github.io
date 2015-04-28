@@ -257,3 +257,22 @@ drwxr-xr-x. 3 verycoder verycoder 4096 Mar 31 23:51 Downloads
 1. 完整备份工具: dump
 	见《鸟哥的linux私房菜》P238
 </pre>
+<h4>Linxu 帐号与用户组</h4>
+<pre>
+1. 用户帐号 /etc/passwd
+verycoder:x:1000:1000:Verycoder:/home/verycoder:/bin/bash
+账户名:密码:UID:GID:用户信息说明:主文件夹:bash
+2. 用户组 /etc/group
+wheel:x:10:verycoder
+用户组名:密码:GID:包含的用户
+3. 查看用户组 []# groups
+4. 切换用户组 []# newgrp
+5. 新建账户
+	[]# useradd [-u UID] [-g 初始用户组] [-G 次要用户组] [-mM] [-c 说明栏] [-d 主文件夹] [-s shell] 用户帐号名
+	-u: 后接UID，数字，指定一个特定的UID
+	-m: 强制创建用户主文件夹(一般账户默认值)
+	-M: 强制不创建用户主文件夹(系统账户默认)
+	-c: /etc/passwd 第5列
+	-d:	指定某个文件夹为主文件夹，而不用默认
+	-s: 定义bash，默认为/bin/bash
+</pre>
