@@ -275,4 +275,20 @@ wheel:x:10:verycoder
 	-c: /etc/passwd 第5列
 	-d:	指定某个文件夹为主文件夹，而不用默认
 	-s: 定义bash，默认为/bin/bash
+6. 更改密码
+	[]# passwd [-l] [-u] [--stdin] [-S] [-n 日数] [-x 日数] [-w 日数] [-i 日期] 帐号
+	--stdin: 可以通过来自前一个管道的数据作为密码输入，对shell script 有帮助
+	-l: Lock，会将/etc/shadow 第二列最前面加上！使密码失效
+	-u: 与-l 相对，是Unlock的意思
+	-S： 列出密码相关参数
+	-n: shadow字段4，多久内不可修改密码参数
+	-x: shadow字段5，多久内必须要修改密码
+	-w: shadow字段6，密码过期前的警告天数
+	-i: shadow字段7，密码失效日期
+7. 修改帐号
+	[]# usermod [-cdegGlsuLU] username
+	用法与新建以及更改密码类似，见《鸟哥的Linux私房菜》 P416
+8. 删除账户
+	[]# userdel [-r] username
+	-r: 连同主文件夹一起删除
 </pre>
