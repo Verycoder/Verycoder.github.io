@@ -292,3 +292,10 @@ wheel:x:10:verycoder
 	[]# userdel [-r] username
 	-r: 连同主文件夹一起删除
 </pre>
+<h4> 2015.5.04 </h4>
+<pre>
+1. 主机的具体权限规划: ACL
+	见《鸟哥的Linux私房菜》P423
+2. add user by ourself
+	see the book P443
+</pre>
