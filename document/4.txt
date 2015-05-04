@@ -298,4 +298,6 @@ wheel:x:10:verycoder
 	见《鸟哥的Linux私房菜》P423
 2. add user by ourself
 	see the book P443
+3. something about Quota(no need to learn now)
+	see the book P451
 </pre>
