@@ -301,3 +301,27 @@ wheel:x:10:verycoder
 3. something about Quota(no need to learn now)
 	see the book P451
 </pre>
+<h4> 2015.5.07</h4>
+<pre>
+1.  在后台执行程序
+	[]#tar -zpcf /home/document /etc &
+	C+z
+2. 显示后台
+	jobs [-lrs]
+	-l: 除了列出Job number 与命令行之外，同时列出PID
+	-r: 仅列出正在run的程序
+	-s: 仅列出Stop的程序
+3. 将后台工作拿到前台来处理
+	fg %jobnumber
+4. 让工作在后台的状态变成运行中
+	bg %jobnumber
+5. 管理后台中的工作
+	kill -signal %jobnumber
+	kill -l 
+	-l: 列出目前kill能够使用的信号(signal)有哪些
+	-1: 重新读取一次参数的配置文件
+	-2: 代表与键盘输入[crtl] -c 同样的操作
+	-9: 立即强制删除一个工作
+	-15: 以正常的程序方式终止一项工作
+</pre>
+
