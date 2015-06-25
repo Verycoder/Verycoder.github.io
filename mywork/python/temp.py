@@ -1,3 +1,4 @@
+'''
 #列表
 a = ["apple", "orange", "pear"]
 print(a[1])
@@ -10,3 +11,5 @@ print(c["sam"])
 d = 1
 d++
 print(d)
+'''
+print("hello world") 
