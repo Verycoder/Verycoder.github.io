@@ -5,9 +5,9 @@ import urllib.request as request
 #html = f.read()
 #f.close()
 
-picid = '6'
-baseurl = "http://www.meineihan.cc/diaosifuli/25951"
-page = 10
+picid = '1'
+baseurl = "http://www.meineihan.cc/diaosifuli/26313"
+page = 16
 
 
 
@@ -20,19 +20,19 @@ for index in range(1, page):
 		url = baseurl + '_' + str(index) + '.html'
 	content = request.urlopen(url).read()
 	#html = html + str(content)
-	fp = open('pic\\' + picid + str(1) + '.txt', 'wb')
+	fp = open('pic' + picid + '\\' + str(1) + '.txt', 'wb')
 	fp.write(content)
 	fp.close()
-	f = open('pic\\' + picid + str(1) + '.txt', 'r')
+	f = open('pic' + picid + '\\' + str(1) + '.txt', 'r')
 	temp = f.read()
 	f.close()
 	pic_url = re.findall('img src="(.*?)" alt="rosi', temp, re.S)
 	for each in pic_url:
-		fp = open('pic\\' + picid + str(2) + '.txt', 'a')
+		fp = open('pic' + picid + '\\' + str(2) + '.txt', 'a')
 		fp.write('<a>'+each+'</a>\n')
 		fp.close()
 
-fp = open('pic\\' + picid + str(2) + '.txt', 'r')
+fp = open('pic' + picid + '\\' + str(2) + '.txt', 'r')
 urls = fp.read()
 fp.close()
 pic_urls = re.findall('<a>(.*?)</a>', urls, re.S)
@@ -44,7 +44,7 @@ for each in pic_urls:
 	req = request.Request(url = each, headers = headers)
 	content = request.urlopen(req).read()
 	#pic = request.urlopen(each)
-	fp = open('pic\\' + picid + str(i) + '.jpg', 'wb')
+	fp = open('pic' + picid + '\\' + str(i) + '.jpg', 'wb')
 	fp.write(content)
 	fp.close()
 	i += 1
